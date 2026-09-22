@@ -3,9 +3,10 @@
     <div class="card  bg-base-100 card-md shadow-sm " >
         <button class="btn btn-primary" (click)="onClick()">{{isActif ? 'Masquer' : 'Afficher'}} Détail</button>
         @if (isActif) {
-            @for (item of compteur; track $index) {
-                <p class="p-1 pl-4" [ngClass]="item>=5 ?'text-white': '' " [ngStyle]="{ 'background-color' : item>=5 ? 'green' : ''}">{{item}}</p>
-            }
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quaerat, quam vero aperiam repellat libero voluptate aliquid. Vero ab maxime repudiandae inventore ipsam similique, quas magnam quae porro, libero itaque!</p>
+        }
+        @for (item of compteur; track $index) {
+            <p class="p-1 pl-4" [ngClass]="item>=5 ?'text-white': '' " [ngStyle]="{ 'background-color' : item>=5 ? 'green' : ''}">{{item}}</p>
         }
     </div>
 </div>

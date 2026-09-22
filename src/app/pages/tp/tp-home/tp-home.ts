@@ -22,6 +22,11 @@ export class TpHome {
       description: "",
       path: '/tp/tp-directives',
     },
+    {
+      title: 'TP 2 :TP Component Communication',
+      description: "",
+      path: '/tp/tp-component-communication',
+    },
     
   ];
 }

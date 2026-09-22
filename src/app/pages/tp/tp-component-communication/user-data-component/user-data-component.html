@@ -1,0 +1,13 @@
+<form class="card w-96 shadow-sm card-md p-4 bg-yellow-400">
+    <h2 class="card-title">User Data</h2>
+    <p class="text-white">Formulaire d'édition</p>
+    <fieldset class="fieldset">
+        <input class="input validator" placeholder="Votre nom  d'utilisateur"  [(ngModel)]="newUser.name" name="name"/>
+    </fieldset>
+    
+    <label class="fieldset">
+        <input class="input validator" placeholder="age utilisateur" [(ngModel)]="newUser.age" name="age"/>
+    </label>
+
+    <button class="btn btn-neutral mt-4" type="submit" (click)="addNewUser()">Maj Data</button>
+</form>

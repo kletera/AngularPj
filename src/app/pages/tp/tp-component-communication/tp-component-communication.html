@@ -1,0 +1,9 @@
+<div class="card mx-auto bg-base-50 mt-5 w-100 p-5 gap-5">
+    <h1 class="text-4xl font-bold text-primary">TP Component Communication</h1>
+    <app-active-user-component
+    [activeUser]="oneUser"
+    ></app-active-user-component>
+    <app-user-data-component
+    (userDataEmitUpdate)="onSubmitAdd($event)"
+    ></app-user-data-component>
+</div>

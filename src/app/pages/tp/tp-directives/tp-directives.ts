@@ -9,13 +9,13 @@ import { Component } from '@angular/core';
 })
 export class TpDirectives {
   compteur:number[]=[];
-  isActif=false;
-  numb:number=0
+  isActif:boolean=false;
+  numb:number=0;
 
   onClick(){
-    this.numb++
-    this.isActif=!this.isActif
-    this.compteur.push(this.numb)
+    this.numb++;
+    this.isActif=!this.isActif;
+    this.compteur.push(this.numb);
 
   }
 }
