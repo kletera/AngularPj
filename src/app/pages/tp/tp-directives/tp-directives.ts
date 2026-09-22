@@ -1,8 +1,8 @@
-import { NgStyle } from '@angular/common';
+import { NgStyle, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [NgStyle],
+  imports: [NgStyle, NgClass],
   selector: 'app-tp-directives',
   styleUrl: './tp-directives.css',
   templateUrl: './tp-directives.html',
