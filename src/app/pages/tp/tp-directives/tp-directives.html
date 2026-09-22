@@ -1,7 +1,11 @@
-<div class="card w-96 bg-base-100 card-md shadow-sm mx-auto mt-5" >
-    <button class="btn btn-primary" (click)="onClick()">Afficher Détail</button>
-    @for (item of compteur; track $index) {
-        <p [ngClass]="item>=5 ?'text-white': '' " [ngStyle]="{'display': isActif ? 'block' : 'none', 'background-color' : item>=5 ? 'green' : ''}">{{item}}</p>
-    }
-
+<div class="card mx-auto mt-5 w-100 gap-5">
+    <h1 class="text-4xl font-bold text-primary">TP Directives</h1>
+    <div class="card  bg-base-100 card-md shadow-sm " >
+        <button class="btn btn-primary" (click)="onClick()">{{isActif ? 'Masquer' : 'Afficher'}} Détail</button>
+        @if (isActif) {
+            @for (item of compteur; track $index) {
+                <p class="p-1 pl-4" [ngClass]="item>=5 ?'text-white': '' " [ngStyle]="{ 'background-color' : item>=5 ? 'green' : ''}">{{item}}</p>
+            }
+        }
+    </div>
 </div>
