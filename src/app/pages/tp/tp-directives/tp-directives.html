@@ -1,0 +1,7 @@
+<div class="card w-96 bg-base-100 card-md shadow-sm mx-auto mt-5" >
+    <button class="btn btn-primary" (click)="onClick()">Afficher Détail</button>
+    @for (item of compteur; track $index) {
+        <p [ngStyle]="{'display': isActif ? 'block' : 'none', 'background-color' : item>=5 ? 'green' : ''}">{{item}}</p>
+    }
+
+</div>

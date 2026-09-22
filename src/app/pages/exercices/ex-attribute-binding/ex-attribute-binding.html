@@ -1,0 +1,24 @@
+<div class="card bg-base-100 w-96 shadow-sm mt-5 ml-5">
+    <figure>
+        @if (isImageLoading) {
+            <span class="loading loading-spinner loading-xl"></span>
+        }
+        <img
+            [src]="user.image"
+            [alt]="user.name"
+            [class.hidden]="isImageLoading"
+            (load)="isImageLoading = false"
+            (error)="isImageLoading = false"
+        />
+    </figure>
+    <div class="card-body">
+        <h2 class="card-title">{{user.name}}</h2>
+        <ul>
+            <li class="text-font">Git Hub : <a [href]="user.github">{{user.github}}</a></li>
+            <li>Status : <span>{{user.status}}</span></li>
+            <li>Age : <span>{{user.age}}</span></li>
+            <li>Bio : <span>{{user.bio}}</span></li>
+            <li>Réputation : <span>{{user.status==='onLigne'? 'Cool' :'Ringard'}}</span></li>
+        </ul>
+    </div>
+</div>

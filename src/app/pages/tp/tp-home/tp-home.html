@@ -1,0 +1,17 @@
+<div class="container mx-auto p-6">
+  <h1 class="text-3xl font-bold mb-6">Exercices</h1>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    @for (ex of tp; track ex.path) {
+      <div class="card bg-base-100 shadow-xl rounded-box">
+        <div class="card-body">
+          <h5 class="card-title text-2xl font-bold">{{ ex.title }}</h5>
+          <p>{{ ex.description }}</p>
+          <div class="card-actions justify-end">
+            <a class="btn btn-primary" [routerLink]="ex.path">Go</a>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

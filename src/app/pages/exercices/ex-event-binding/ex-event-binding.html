@@ -1,0 +1,10 @@
+<form class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+    <h2 class="card-title"><span class="text-primary">List Friends</span> (Event Binding)</h2>
+    <fieldset class="fieldset">
+        <label class="label">Nom de l'ami :</label>
+        <input type="text" class="input validator" placeholder="Entrer le nom d'un ami" (keyup)="onInputChange($event)"  required />
+        <p>{{textInput}}</p>
+        <p>{{listFriendsCreationStatus}}</p>
+    </fieldset>
+    <button class="btn btn-primary mt-4" type="submit" (click)="addFriend($event)" [disabled]="isActif">+ Ajouter un ami</button>
+</form>

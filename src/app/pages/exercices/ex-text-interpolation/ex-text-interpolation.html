@@ -1,0 +1,29 @@
+<div class="card w-210 bg-base-100 mx-auto mt-5 gap-5">
+    <h1 class="card-title text-primary">{{courseTitle}}</h1>
+    <div class="flex flex-wrap gap-5">
+        <div class="card w-100 bg-base-100 card-md shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title">1. Type primitifs</h2>
+            <p>Note maximal : <span class="badge badge-neutral">{{noteM}}/20</span> </p>
+            <p>Score actuel : <span class="badge badge-primary">{{score}}/20</span></p>
+            <p>Pourcentage : <span class="text-secondary">{{pourcent}}%</span></p>
+          </div>
+        </div>
+        <div class="card w-100 bg-base-100 card-md shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title">2. Objet & Méthode</h2>
+            <p>Role : <span>{{me.role}}</span></p>
+            <p>Nom complet (Méthode) : <span>{{me.prenomC+" "+me.nameC}}</span></p>
+            <p>Statut : <span class="badge badge-success">{{me.statut ? 'Actif' : 'Inactif'}}</span></p>
+          </div>
+        </div>
+        <div class="card w-100 bg-base-100 card-md shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title">3. Tableau (Array)</h2>
+            <p>Première compétence (skill[0]) : <span class="badge badge-outline badge-accent">{{skill[0]}}</span></p>
+            <p>Toutes les compétence (.join) :</p>
+            <p>{{skill.join(", ")}}</p>
+          </div>
+        </div>
+    </div>
+</div>
