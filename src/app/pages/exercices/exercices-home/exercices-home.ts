@@ -30,5 +30,11 @@ export class ExercicesHome {
       description: "Maitriser l'utilisation des event.",
       path: '/exercices/ex-event-binding',
     },
+    {
+      title: 'Exercice 4 :  HTTP Module API (LifeCycle NgOnInit) ',
+      description: `Faire un service qui contacte cette API 
+https://randomuser.me/api/`,
+      path: '/exercices/ex-http-module-api',
+    },
   ];
 }

@@ -17,4 +17,8 @@ export const EXERCICES_ROUTES : Route[] = [
         path:'ex-event-binding',
         loadComponent:()=>import('./ex-event-binding/ex-event-binding').then(m=>m.ExEventBinding),
     },
+    {
+        path:'ex-http-module-api',
+        loadComponent:()=>import('./ex-http-module-api/ex-http-module-api').then(m=>m.ExHttpModuleApi),
+    },
 ]
