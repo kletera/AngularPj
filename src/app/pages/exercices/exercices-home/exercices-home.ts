@@ -36,5 +36,15 @@ export class ExercicesHome {
 https://randomuser.me/api/`,
       path: '/exercices/ex-http-module-api',
     },
+    {
+      title: 'Exercice 5 :  Observables  ',
+      description: ``,
+      path: '/exercices/ex-observables',
+    },
+    {
+      title: 'Exercice 6 :  SIGNALS Calculateur de Panier e-Commerce Dynamique  ',
+      description: ``,
+      path: '/exercices/ex-signals',
+    },
   ];
 }

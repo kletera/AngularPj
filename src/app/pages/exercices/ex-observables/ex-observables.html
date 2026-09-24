@@ -1,1 +1,25 @@
-<p>ex-observables works!</p>
+<div class="card mx-auto mt-7 w-100 gap-5">
+    <h1 class="card-title text-primary font-bold">Générateur Simplifié de Nombres Amléatoire</h1>
+    <div class="flex justify-center space-x-4 mb-8">
+        <button class="btn btn-success" (click)="start()">Démarrer</button>
+        <!-- 💡 Lecture du signal paused() avec des parenthèses -->
+        <button class="btn btn-warning" (click)="pauseResume()">
+        {{ paused() ? 'Reprendre' : 'Pause' }}
+        </button>
+        <button class="btn btn-error" (click)="stop()">Arrêter</button>
+  </div>
+    <div class="card bg-base-200 shadow-sm p-5">
+        <h2 class="card-title text-secondary font-bold">Nombres Générés</h2>
+        <ul class="list">
+            @for (number of numbers(); track $index) {
+                <li class="bg-base-200 p-3 rounded-lg flex justify-center text-lg font-mono">
+                    <span class="text-primary font-extrabold">{{ number }}</span>
+                </li>
+            } @empty {
+                <div class="text-center mt-4">
+                    Aucun nombre généré pour l'instant.
+                </div>
+            }
+        </ul>
+    </div>
+</div>

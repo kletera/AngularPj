@@ -1,0 +1,59 @@
+<div class="card mx-auto mt-7 w-fit gap-5">
+    <div class="flex justify-between">
+        <h1 class="card-title text-primary font-bold">Exercice : Panier Réactif avec Signals</h1>
+        <div class="card-actions">
+            <button class="btn btn-outline btn-error" (click)="reset()">Rénitialiser</button>
+        </div>
+    </div>
+    <div class="flex gap-5">
+        <div class="card w-96 bg-base-100 card-md shadow-sm">
+            <div class="card-body gap-5">
+                <h2 class="card-title">1. Configuration de la commande</h2>
+                <div>
+                    <p>Quantité d'articles</p>
+                    <div class="flex justify-between items-center">
+                        <div class="card-actions items-center gap-3">
+                            <button class="btn " (click)="decrease()">-</button>
+                            <p>{{this.quantity()}}</p>
+                            <button class="btn" (click)="increase()">+</button>
+                        </div>
+                        <p>(35€ / unité)</p>
+                    </div>
+                </div>
+                <div>
+                    <p>Code Promo / Remise</p>
+                    <div class="flex">
+                        <input type="radio" name="radio-1" aria-label="Aucun (0%)" class="btn" (click)="setDiscount(0)" />
+                        <input type="radio" name="radio-1" aria-label="-10%" class="btn" (click)="setDiscount(10)"/>
+                        <input type="radio" name="radio-1" aria-label="-20%" class="btn" (click)="setDiscount(20)"/>
+                        
+                    </div>
+                </div>
+                <div class="card card-md shadow-sm flex-row items-center gap-3">
+                    <div>
+                        <p>Livraison express(24h)</p>
+                        <p>supplément fixe de 12€</p>
+                    </div>
+                    <input type="checkbox" class="toggle validator" title="Required" (click)="setShipping()"/>
+                </div>
+            </div>
+        </div>
+        <div class="card card-border border-primary bg-base-100 w-96">
+            <div class="card-body">
+                <h2 class="card-title">2. Synthèse de la commande</h2>
+                <p>Toute les valeur ci-dessous proviennent de computed()</p>
+                <ul class="list gap-3">
+                    <li class="list flex-row justify-between">Sous-total brut <span>{{this.subtotal()}}</span></li>
+                    <li class="list flex-row justify-between">Remise ({{discountCode()}}%)<span>{{discountAmount()}}</span></li>
+                    <li class="list flex-row justify-between">Frais de port<span>{{this.shippingFee()}}</span></li>
+                </ul>
+                <p>Total à payer</p>
+                <p>{{this.total()}}</p>
+                <p>Encore 26 pour la livraison gratuite !</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary" (click)="reset()">Comander (1 article)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

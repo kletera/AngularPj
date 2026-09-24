@@ -21,4 +21,12 @@ export const EXERCICES_ROUTES : Route[] = [
         path:'ex-http-module-api',
         loadComponent:()=>import('./ex-http-module-api/ex-http-module-api').then(m=>m.ExHttpModuleApi),
     },
+    {
+        path:'ex-observables',
+        loadComponent:()=>import('./ex-observables/ex-observables').then(m=>m.ExObservables),
+    },
+    {
+        path:'ex-signals',
+        loadComponent:()=>import('./ex-signals/ex-signals').then(m=>m.ExSignals),
+    },
 ]
