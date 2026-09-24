@@ -29,4 +29,12 @@ export const EXERCICES_ROUTES : Route[] = [
         path:'ex-signals',
         loadComponent:()=>import('./ex-signals/ex-signals').then(m=>m.ExSignals),
     },
+    {
+        path:'ex-formulaire',
+        loadComponent:()=>import('./ex-formulaire/ex-formulaire').then(m=>m.ExFormulaire),
+    },
+    {
+        path:'ex-task-list-fb',
+        loadComponent:()=>import('./ex-task-list-fb/ex-task-list-fb').then(m=>m.ExTaskListFb),
+    },
 ]

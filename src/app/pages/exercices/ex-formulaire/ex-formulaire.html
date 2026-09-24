@@ -1,0 +1,56 @@
+<div class="min-h-[80vh] w-130 p-4 mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-primary">
+      Exercice : Validation de Formulaire
+    </h1>
+    <p class="">Validation temps réel via RegEx et computed() sans dépendre de ReactiveForms</p>
+    <div class="card w-full max-w-md bg-base-100 shadow-xl border border-base-200 mx-auto">
+        <div class="card-body">
+
+            <form class="space-y-4">
+                <!-- Champ Email -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text font-semibold">Adresse Email</span>
+                    </label>
+                    <input type="email" placeholder="exemple@email.com"
+                        class="input input-bordered w-full" (input)="inEmail($event)"/>
+                </div>
+
+                <!-- Champ Mot de passe -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text font-semibold">Mot de passe</span>
+                    </label>
+                    <div class="flex">
+                        <input type="password" placeholder="••••••••" class="input input-bordered w-full" (input)="inPassword($event)" [type]="showPassword() ? 'text' : 'password'"/>
+                        <button class="btn join-item" (click)="toggleShowPassword()"> {{ showPassword() ? 'Masquer' : 'Afficher' }}</button>
+                    </div>
+                    <p class="flex justify-between">Force du mot de passe : <span>{{pwdStrenght()?.libelle}}</span></p>
+                    <progress class="progress w-full" [class]="pwdStrenght()?.color" [value]="pwdStrenght()?.score" max="4"></progress>
+                    @if(!isPasswordValid() && this.password.length>0){
+                        <p class="text-error">Au moins 8 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial</p>
+                    }
+                </div>
+
+                <!-- Champ Téléphone -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text font-semibold">Théléphone portable</span>
+                    </label>
+                    <input type="number" placeholder="+33••••••••"
+                        class="input input-bordered w-full" (input)="inPhone($event)"/>
+                </div>
+
+                <!-- Bouton de validation -->
+                <div class="form-control mt-6">
+                    <button type="submit" class="btn btn-primary w-full" [disabled]="isFormValid()">
+                        @if(!isFormValid()){
+                            <span class="loading loading-spinner loading-xs"></span>
+                        }
+                        <span>Créer mon compte</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

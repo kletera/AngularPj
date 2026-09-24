@@ -46,5 +46,15 @@ https://randomuser.me/api/`,
       description: ``,
       path: '/exercices/ex-signals',
     },
+    {
+      title: 'Exercice 7 : Validation de Formulaire  ',
+      description: `Validation temps réel via RegEx et computed() sans dépendre de ReactiveForms`,
+      path: '/exercices/ex-formulaire',
+    },
+    {
+      title: 'Exercice 8 : Liste des Tache Firebase  ',
+      description: `Utilisation de Firebase`,
+      path: '/exercices/ex-task-list-fb',
+    },
   ];
 }
